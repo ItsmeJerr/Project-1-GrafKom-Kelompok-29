@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Bubble Chart (No Library)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Performance Bubble Chart</h1>
+        
+        <div class="stats-container" id="stats-container">
+            <!-- Stats will be populated by JavaScript -->
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter Student ID">
+            <button id="search-button">Search</button>
+            <div id="search-results"></div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="x-axis">X-Axis:</label>
+                <select id="x-axis">
+                    <option value="TBP">TBP Score</option>
+                    <option value="TUGAS">Assignment Score</option>
+                    <option value="UTS">Midterm Score</option>
+                    <option value="UAS">Final Exam Score</option>
+                    <option value="TOTAL" selected>Total Score</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="y-axis">Y-Axis:</label>
+                <select id="y-axis">
+                    <option value="TBP">TBP Score</option>
+                    <option value="TUGAS">Assignment Score</option>
+                    <option value="UTS">Midterm Score</option>
+                    <option value="UAS" selected>Final Exam Score</option>
+                    <option value="TOTAL">Total Score</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="bubble-size">Bubble Size:</label>
+                <select id="bubble-size">
+                    <option value="CPMK012">CPMK012</option>
+                    <option value="CPMK031">CPMK031</option>
+                    <option value="CPMK071" selected>CPMK071</option>
+                    <option value="CPMK072">CPMK072</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="min-score">Min Score Filter:</label>
+                <input type="number" id="min-score" min="0" max="100" value="0">
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="zoom-controls">
+                <button class="zoom-button" id="reset-zoom">Reset Zoom</button>
+            </div>
+            <svg id="bubbleChart"></svg>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+        
+        <div class="legend" id="legend"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Radar Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Performance Radar Chart</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="student1-select">Student 1:</label>
+                <select id="student1-select"></select>
+            </div>
+
+            <div class="control-group">
+                <label for="student2-select">Student 2:</label>
+                <select id="student2-select">
+                    <option value="">None</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Metrics:</label>
+                <div id="metrics-checkboxes"></div>
+            </div>
+
+            <div class="control-group">
+                <label>
+                    <input type="checkbox" id="average-toggle"> Tampilkan Rata-rata
+                </label>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <svg id="radarChart"></svg>
+            <div class="tooltip" id="tooltip"></div>
+        </div>
+
+        <div class="legend" id="legend"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="chart.js"></script>
+</body>
+</html>

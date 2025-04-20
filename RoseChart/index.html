@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Performance Visualization</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="view-mode">View Mode:</label>
+                <select id="view-mode">
+                    <option value="student">Individual Student</option>
+                    <option value="statistics">Class Statistics</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="student-select">Select Student:</label>
+                <select id="student-select">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="data-view">Data View:</label>
+                <select id="data-view">
+                    <option value="basic">Basic Scores (TBP/TUGAS/UTS/UAS)</option>
+                    <option value="cpmk">CPMK Scores</option>
+                    <option value="all">All Scores</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="visualization-container">
+            <div class="chart-container">
+                <svg id="roseChart"></svg>
+                <div class="tooltip" id="tooltip"></div>
+            </div>
+            
+            <div class="table-container">
+                <h2>Detailed Performance</h2>
+                <table id="performance-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="legend" id="legend"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="grafik.js"></script>
+</body>
+</html>
